@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f6f6ec;
+}
+
+.wrapper {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  /* background: #7b7b64; */
+}
+
+h1 {
+  text-align: left;
+  width: 50%;
+  margin: auto;
+  border-bottom: 1px solid #E2E6E6;
+}
+
+.item {
+  width: 50%;
+  /* height: 100px; */
+  text-align: center;
+  margin: auto;
+  /* background: rgb(62, 62, 54); */
+}
