@@ -6,14 +6,13 @@
 
 body {
   background: #f6f6ec;
-  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  color: black;
 }
 
 .wrapper {
   text-align: center;
   width: 50%;
   margin: auto;
-  /* background: #7b7b64; */
 }
 
 h1 {
@@ -25,47 +24,68 @@ h1 {
 
 .item {
   width: 80%;
-  /* margin-top: 10px;
-  margin-bottom: 10px;
-  padding-bottom: 10px; */
-  /* height: 100px; */
   text-align: center;
   margin: auto;
   border-bottom: 1px solid #E2E6E6;
-  transition: linear 1s;
-  /* background: rgb(62, 62, 54); */
 }
 
-.item:hover {
-  background-color: red;
+.itemInput {
+  width: 0;
+  height: 0;
+  appearance: none;
+}
+
+.itemTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
 }
 
-p {
-  text-align: left;
+.title {
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+}
+
+.icon {
+  font-size: 40px;
+  font-weight: 1000;
+  color: #f6f6ec;
+}
+
+.imgMem {
+  height: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
 
 img {
   width: 50%;
 }
 
-.itemTitle {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-}
-
-.title {
-  display: flex;
-  align-items: center;
-}
-
-.icon {
-  font-size: 40px;
-}
-
-.item:checked+.icon {
-  transform: rotate(45deg);
-  display: block;
+.wrapper:hover .icon {
   color: black;
+}
+
+.item:hover>.imgMem {
+  height: 50%;
+}
+
+.itemInput:hover~.itemTitle>.icon {
+  transform: rotate(45deg);
+}
+
+.itemInput:checked~.itemTitle {
+  color: blue;
+}
+
+.itemInput:checked~.itemTitle>.icon {
+  color: blue;
+  transform: rotate(45deg);
+}
+
+.itemInput:checked~.imgMem {
+  height: 50%;
 }
