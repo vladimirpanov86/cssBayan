@@ -6,6 +6,7 @@
 
 body {
   background: #f6f6ec;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 
 .wrapper {
@@ -17,15 +18,54 @@ body {
 
 h1 {
   text-align: left;
-  width: 50%;
+  width: 80%;
   margin: auto;
   border-bottom: 1px solid #E2E6E6;
 }
 
 .item {
-  width: 50%;
+  width: 80%;
+  /* margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px; */
   /* height: 100px; */
   text-align: center;
   margin: auto;
+  border-bottom: 1px solid #E2E6E6;
+  transition: linear 1s;
   /* background: rgb(62, 62, 54); */
+}
+
+.item:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+p {
+  text-align: left;
+}
+
+img {
+  width: 50%;
+}
+
+.itemTitle {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.item:checked+.icon {
+  transform: rotate(45deg);
+  display: block;
+  color: black;
 }
